@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    >
+
+    <com.dobregons.android.tictactoe.BoardView
+        android:id="@+id/board"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="5dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/board">
+
+        <TextView
+            android:id="@+id/information"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="info"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/txtHuman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/information"
+            android:paddingTop="2dp"
+            android:text="Human:" />
+
+        <TextView
+            android:id="@+id/txtResHuman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/information"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:paddingTop="2dp"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/txtTies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHuman"
+            android:paddingTop="2dp"
+            android:text="Ties:" />
+
+        <TextView
+            android:id="@+id/txtResTies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHuman"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/txtAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTies"
+            android:paddingTop="2dp"
+            android:text="Android:" />
+
+        <TextView
+            android:id="@+id/txtResAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTies"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:paddingTop="2dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnNextGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtResAndroid"
+            android:background="@drawable/btn_android"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/continuar" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
